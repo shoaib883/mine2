@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Tayyaba's living cosmos ✦ every click writes love ✦</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            background: #00020a;
+        }
+
+        /* ===== IMMERSIVE LIVING UNIVERSE BACKGROUND ===== */
+        .universe-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            background: radial-gradient(ellipse at 40% 50%, #130b2b 0%, #020210 70%);
+            overflow: hidden;
+        }
+
+        .nebula-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(180, 130, 255, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(255, 140, 200, 0.12) 0%, transparent 35%),
+                radial-gradient(circle at 10% 80%, rgba(100, 200, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 95% 20%, rgba(255, 215, 100, 0.1) 0%, transparent 30%);
+            animation: nebulaDrift 40s infinite alternate ease-in-out;
+        }
+
+        @keyframes nebulaDrift {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            100% { transform: scale(1.2) rotate(2deg); opacity: 1; }
+        }
+
+        .star-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(1.5px 1.5px at 15px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 72px 430px, #f0f0ff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 280px 120px, #ffe9e9, rgba(0,0,0,0)),
+                radial-gradient(1.2px 1.2px at 350px 620px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 600px 290px, #fff0e0, rgba(0,0,0,0)),
+                radial-gradient(1.8px 1.8px at 820px 190px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2.5px 2.5px at 950px 730px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 1120px 400px, #eef, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 1240px 850px, #fffff0, rgba(0,0,0,0)),
+                radial-gradient(1.3px 1.3px at 70px 950px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2.2px 2.2px at 440px 1120px, #f8f8ff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 780px 1300px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 1250px 200px, #fffaf0, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 330px 1570px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 910px 1680px, #f5f5ff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 140px 1820px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 55% 88%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 73% 42%, #fff0f0, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 12% 33%, #fefefe, rgba(0,0,0,0)),
+                radial-gradient(2.2px 2.2px at 47% 69%, #fffff0, rgba(0,0,0,0)),
+                radial-gradient(1.7px 1.7px at 88% 21%, #f0f8ff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 94% 57%, #ffffff, rgba(0,0,0,0));
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            animation: starTwinkle 8s infinite alternate;
+        }
+
+        @keyframes starTwinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .dust-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            background-image: 
+                radial-gradient(3px 3px at 30% 40%, rgba(255,255,200,0.1), transparent 70%),
+                radial-gradient(4px 4px at 70% 85%, rgba(200,180,255,0.1), transparent 80%),
+                radial-gradient(2px 2px at 15% 20%, rgba(255,200,200,0.1), transparent 60%),
+                radial-gradient(3px 3px at 90% 10%, rgba(210,230,255,0.1), transparent 70%),
+                radial-gradient(5px 5px at 45% 95%, rgba(255,220,150,0.1), transparent 80%);
+            filter: blur(2px);
+            animation: dustFloat 30s infinite alternate;
+        }
+
+        @keyframes dustFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-10px, -15px) scale(1.05); }
+        }
+
+        .shooting-star {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0));
+            border-radius: 100%;
+            filter: drop-shadow(0 0 20px gold);
+            animation: shoot 8s linear infinite;
+            opacity: 0;
+            z-index: -1;
+        }
+        @keyframes shoot {
+            0% { transform: translateX(-10%) translateY(-10%) rotate(20deg); opacity: 0; }
+            5% { opacity: 1; }
+            15% { transform: translateX(120vw) translateY(40vh) rotate(20deg); opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ff6b9d;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            mix-blend-mode: difference;
+        }
+        .cursor::after {
+            content: '❤️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            opacity: 0.5;
+        }
+
+        /* Click Message Popup */
+        .click-message {
+            position: fixed;
+            background: rgba(0,0,0,0.95);
+            border: 2px solid #ff6b9d;
+            padding: 12px 24px;
+            border-radius: 40px;
+            color: white;
+            font-size: 1rem;
+            z-index: 10000;
+            pointer-events: none;
+            animation: messageFloat 2s ease-out forwards;
+            box-shadow: 0 0 30px rgba(255,107,157,0.7);
+            font-weight: 600;
+            text-shadow: 0 0 8px gold;
+            max-width: min(300px, 80vw);
+            white-space: normal;
+            word-break: break-word;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes messageFloat {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+            20% { transform: translate(-50%, -100px) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -200px) scale(0.8); opacity: 0; }
+        }
+
+        /* Heart Explosion */
+        .explosion-heart {
+            position: fixed;
+            color: #ff6b9d;
+            font-size: 24px;
+            pointer-events: none;
+            z-index: 9998;
+            animation: explosionFloat 1.5s ease-out forwards;
+            filter: drop-shadow(0 0 8px gold);
+        }
+        @keyframes explosionFloat {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+            100% { transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(2); opacity: 0; }
+        }
+
+        /* Floating Hearts Trail */
+        .heart-trail {
+            position: fixed;
+            color: #ff9ec0;
+            font-size: 20px;
+            pointer-events: none;
+            z-index: 9997;
+            animation: floatAway 2s ease-out forwards;
+        }
+        @keyframes floatAway {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translate(var(--x), var(--y)) rotate(360deg); opacity: 0; }
+        }
+
+        /* Universe Container */
+        .universe { position: relative; min-height: 100vh; }
+
+        /* Interactive Header */
+        .interactive-header {
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+        }
+        .title {
+            font-size: clamp(3rem, 15vw, 6rem);
+            font-weight: 900;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            background: linear-gradient(45deg, #ff6b9d, #7b68ee, gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titlePulse 2.5s infinite;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            line-height: 1.2;
+        }
+        .title::after {
+            content: '✨ Click me! ✨';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            letter-spacing: normal;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 18px;
+            border-radius: 40px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: 0.3s;
+            color: white;
+            text-shadow: none;
+            -webkit-text-fill-color: white;
+        }
+        .title:hover::after { opacity: 1; bottom: -40px; }
+
+        @keyframes titlePulse { 0%,100% { filter: drop-shadow(0 0 15px #ff6b9d); } 50% { filter: drop-shadow(0 0 40px gold); } }
+
+        /* Galaxy Orb — fixed bottom right */
+        .galaxy-orb {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff6b9d, #4b0082, #03050f);
+            box-shadow: 0 0 40px #ff6b9d, 0 0 80px #7b68ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+            transition: 0.4s;
+            border: 2px solid gold;
+            animation: orbSpin 12s infinite linear;
+        }
+        .galaxy-orb:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 0 70px gold;
+        }
+        .galaxy-orb i {
+            font-size: 2.8rem;
+            color: white;
+            text-shadow: 0 0 20px gold;
+            animation: orbIconFloat 3s infinite alternate;
+        }
+        @keyframes orbSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes orbIconFloat { 0% { opacity: 0.8; transform: scale(1); } 100% { opacity: 1; transform: scale(1.15); } }
+
+        /* Galaxy Hint (fixed) */
+        .galaxy-hint {
+            position: fixed;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 5, 25, 0.8);
+            backdrop-filter: blur(6px);
+            padding: 10px 25px;
+            border-radius: 40px;
+            font-size: 1rem;
+            border: 2px solid #ff6b9d;
+            box-shadow: 0 0 30px rgba(255,107,157,0.5);
+            animation: hintFloat 3s infinite;
+            cursor: pointer;
+            z-index: 999;
+            white-space: nowrap;
+            color: #fff0f5;
+            font-weight: 600;
+            max-width: 90vw;
+        }
+        @media (max-width: 600px) { .galaxy-hint { font-size: 0.85rem; padding: 8px 18px; bottom: 100px; white-space: normal; } }
+        @keyframes hintFloat { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
+
+        /* Interactive Cards Grid */
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .interactive-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 40px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .interactive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: 0.5s;
+        }
+        .interactive-card:hover { transform: translateY(-8px) scale(1.02); border-color: gold; box-shadow: 0 0 40px rgba(255,215,0,0.3); }
+        .interactive-card:hover::before { left: 100%; }
+        .interactive-card::after {
+            content: '✨ Click for love ✨';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: 0.3s;
+            background: rgba(0,0,0,0.6);
+            padding: 5px 15px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+        .interactive-card:hover::after { opacity: 1; bottom: 20px; }
+        .card-icon { font-size: 3.5rem; margin-bottom: 15px; }
+
+        /* Drag & Drop Zone */
+        .drag-zone {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        .draggable {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff9eb5, #7b68ee);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            transition: 0.2s;
+            user-select: none;
+            box-shadow: 0 0 40px rgba(255,107,157,0.7);
+            position: relative;
+            font-size: 2.5rem;
+            border: 2px solid gold;
+        }
+        .draggable:active { cursor: grabbing; transform: scale(0.98); }
+        .draggable::after {
+            content: '✨ Drag me ✨';
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: 0.3s;
+            background: rgba(0,0,0,0.5);
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: white;
+        }
+        .draggable:hover::after { opacity: 1; bottom: -45px; }
+
+        .drop-zone {
+            width: 280px;
+            height: 120px;
+            background: rgba(255,255,255,0.03);
+            border: 3px dashed #ff6b9d;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: gold;
+            transition: 0.3s;
+            margin: 20px auto;
+            backdrop-filter: blur(6px);
+        }
+        .drop-zone:hover { border-color: gold; background: rgba(255,107,157,0.1); transform: scale(1.02); }
+
+        /* REALISTIC WHITE STARS (proximity) */
+        .star-field {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 40px 20px;
+        }
+        .proximity-star {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border-radius: 50%;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+            filter: drop-shadow(0 0 8px rgba(255,255,240,0.8));
+            color: #fffde7;
+            text-shadow: 0 0 20px white, 0 0 40px #b0c4ff;
+        }
+        .proximity-star::before {
+            content: "✧";
+            font-size: 4rem;
+            position: absolute;
+            color: white;
+            opacity: 0.9;
+            filter: drop-shadow(0 0 12px white);
+            animation: starGlow 3s infinite alternate;
+        }
+        .proximity-star[data-index="1"]::before { content: "✦"; font-size: 3.8rem; }
+        .proximity-star[data-index="2"]::before { content: "✧"; transform: rotate(15deg); }
+        .proximity-star[data-index="3"]::before { content: "★"; font-size: 4rem; }
+        .proximity-star[data-index="4"]::before { content: "☆"; font-size: 4.2rem; }
+
+        @keyframes starGlow {
+            0% { opacity: 0.7; text-shadow: 0 0 15px white, 0 0 30px #b0c4ff; }
+            100% { opacity: 1; text-shadow: 0 0 30px white, 0 0 60px #b0e0ff; }
+        }
+        .proximity-star::after {
+            content: '⭐ Click ⭐';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            background: rgba(0,0,0,0.7);
+            padding: 5px 15px;
+            border-radius: 30px;
+            color: white;
+            letter-spacing: 0.5px;
+            transition: 0.2s;
+            pointer-events: none;
+        }
+        .proximity-star:hover::after { opacity: 1; bottom: -50px; }
+        .proximity-star:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 25px #ffffff);
+        }
+
+        /* Gravity Field */
+        .gravity-field {
+            position: relative;
+            height: 350px;
+            background: radial-gradient(circle at 20% 30%, #1a0b2e, #03050f);
+            border-radius: 60px;
+            overflow: hidden;
+            margin: 40px auto;
+            max-width: 1100px;
+            border: 2px solid #7b68ee;
+            box-shadow: inset 0 0 70px #4b0082, 0 0 50px #ff6b9d;
+        }
+
+        /* Interactive Planet */
+        .interactive-planet {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 60px auto;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .interactive-planet:hover { transform: scale(1.1) rotate(8deg); }
+        .planet-core {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #ff9ec0, #7b68ee, #2e1b5f);
+            animation: planetPulse 4s infinite;
+            box-shadow: 0 0 70px #ff6b9d, 0 0 140px #7b68ee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        @keyframes planetPulse { 0%,100% { box-shadow: 0 0 70px #ff6b9d; } 50% { box-shadow: 0 0 130px gold; } }
+
+        /* Proposal Box */
+        .interactive-proposal { padding: 40px 20px; }
+        .proposal-box {
+            background: rgba(10,5,30,0.7);
+            backdrop-filter: blur(20px);
+            padding: 50px 30px;
+            border-radius: 80px;
+            border: 4px solid gold;
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .proposal-box::after {
+            content: '💍 Click for forever 💍';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 25px;
+            border-radius: 40px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .proposal-box:hover::after { opacity: 1; bottom: 35px; }
+        .proposal-box:hover { box-shadow: 0 0 100px gold; transform: scale(1.01); }
+        .proposal-question { font-size: 2.8rem; font-weight: 700; background: linear-gradient(45deg, gold, #ffb6c1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 20px 0; }
+
+        .response-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0 20px;
+        }
+        .response-btn {
+            padding: 18px 50px;
+            font-size: 2rem;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            position: relative;
+            border: 3px solid transparent;
+        }
+        #yes-btn { background: linear-gradient(145deg, gold, #ff8fab); color: #03050f; }
+        #yes-btn:hover { transform: scale(1.1); box-shadow: 0 0 50px gold; border-color: white; }
+        #no-btn { background: #2a1e3a; color: #ccc; border: 3px solid #ff6b9d; position: relative !important; }
+
+        #response-message { font-size: 2rem; min-height: 100px; margin-top: 30px; font-weight: 700; text-shadow: 0 0 20px gold; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-top: 2px solid #7b68ee;
+            margin-top: 50px;
+        }
+
+        /* Time Message */
+        .time-message {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            background: rgba(0,0,0,0.8);
+            padding: 14px 28px;
+            border-radius: 40px;
+            border-left: 6px solid gold;
+            transform: translateX(450px);
+            transition: 0.5s cubic-bezier(0.2,0.9,0.3,1);
+            z-index: 1100;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            font-weight: 600;
+            border: 2px solid #ff6b9d;
+            color: #fff0e0;
+            box-shadow: 0 0 30px rgba(255,215,0,0.5);
+            max-width: calc(100vw - 50px);
+            word-break: break-word;
+            text-align: center;
+        }
+        .time-message.show { transform: translateX(0); }
+
+        /* Space Pet — fixed bottom left */
+        .space-pet {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 85px;
+            height: 85px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: 0.3s;
+            filter: drop-shadow(0 0 20px gold);
+            background: rgba(255,255,240,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ffb6c1;
+        }
+        .space-pet:hover { transform: scale(1.2) rotate(5deg); background: rgba(255,215,0,0.2); }
+        .space-pet i { font-size: 3.5rem; color: #ffe5b4; }
+        .pet-message {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a0b2e;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            display: none;
+            border: 2px solid gold;
+            color: gold;
+            margin-bottom: 10px;
+        }
+        .space-pet:hover .pet-message { display: block; }
+
+        /* Easter eggs */
+        .easter-egg {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        /* Cosmic clock */
+        .cosmic-clock {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 30px auto 10px;
+            font-family: 'Orbitron', monospace;
+            background: rgba(0,0,0,0.4);
+            padding: 15px 30px;
+            border-radius: 60px;
+            display: inline-block;
+            border: 1px solid gold;
+            backdrop-filter: blur(4px);
+            letter-spacing: 3px;
+        }
+        .clock-container { text-align: center; }
+
+        /* Love Comet */
+        .love-comet {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 10px;
+            background: radial-gradient(circle, gold, #ffaa33);
+            border-radius: 50%;
+            box-shadow: 0 0 60px gold;
+            animation: cometDrift 8s infinite alternate ease-in-out;
+            cursor: pointer;
+        }
+        .love-comet::after {
+            content: '☄️';
+            position: absolute;
+            font-size: 4rem;
+            top: -20px;
+            right: -40px;
+            transform: rotate(20deg);
+            filter: drop-shadow(0 0 20px orange);
+        }
+        @keyframes cometDrift {
+            0% { transform: translateX(-30px) translateY(-10px); }
+            100% { transform: translateX(30px) translateY(20px); }
+        }
+
+        /* Poem display */
+        .poem-container {
+            max-width: 600px;
+            margin: 20px auto 40px;
+            padding: 20px;
+            background: rgba(10,5,30,0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            border: 2px solid gold;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: #fff0e0;
+            box-shadow: 0 0 50px rgba(255,215,0,0.3);
+            transition: 0.3s;
+        }
+        .poem-container:hover { box-shadow: 0 0 70px gold; }
+
+        /* Constellation */
+        .constellation {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0 50px;
+        }
+        .constellation-star {
+            width: 40px; height: 40px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 30px white;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+        .constellation-star::before {
+            content: '💫';
+            position: absolute;
+            font-size: 1.5rem;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        .constellation-star:hover::before { opacity: 1; }
+        .constellation-star:hover { transform: scale(1.4); background: #ffecb3; }
+
+        /* Love Nebula (interactive cloud) */
+        .love-nebula {
+            width: 300px;
+            height: 150px;
+            margin: 40px auto;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255,100,150,0.3), rgba(120,80,200,0.2), transparent 70%);
+            filter: blur(20px);
+            border-radius: 50%;
+            animation: nebulaPulse 10s infinite alternate;
+            cursor: pointer;
+        }
+        @keyframes nebulaPulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.3); opacity: 0.9; }
+        }
+
+        /* ✨ NEW: Cosmic Message in a Bottle ✨ (replaces wishing well) */
+        .cosmic-bottle {
+            text-align: center;
+            margin: 30px auto;
+            padding: 25px;
+            max-width: 400px;
+            background: rgba(20, 10, 40, 0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 100px 100px 30px 30px;
+            border: 2px solid gold;
+            box-shadow: 0 0 60px rgba(255,215,0,0.4);
+            cursor: pointer;
+            transition: 0.4s;
+            font-size: 1.8rem;
+            position: relative;
+            animation: bottleFloat 6s infinite alternate ease-in-out;
+        }
+        .cosmic-bottle:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: #ffb6c1;
+            box-shadow: 0 0 80px gold;
+        }
+        .cosmic-bottle::before {
+            content: '🍾✨';
+            font-size: 3rem;
+            display: block;
+            filter: drop-shadow(0 0 15px gold);
+        }
+        .cosmic-bottle span {
+            font-size: 1.2rem;
+            display: block;
+            margin-top: 8px;
+            color: #ffecb3;
+        }
+        @keyframes bottleFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        @media (max-width: 700px) {
+            .title { letter-spacing: 0.1em; }
+            .proposal-question { font-size: 2rem; }
+            .response-btn { font-size: 1.5rem; padding: 15px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- LIVING UNIVERSE BACKGROUND (fully immersive) -->
+    <div class="universe-bg">
+        <div class="nebula-layer"></div>
+        <div class="star-layer"></div>
+        <div class="dust-particles"></div>
+        <div class="shooting-star" style="top: 10%; left: -10%; animation-delay: 2s;"></div>
+        <div class="shooting-star" style="top: 30%; left: -5%; animation-delay: 7s;"></div>
+        <div class="shooting-star" style="top: 70%; left: -15%; animation-delay: 13s;"></div>
+        <div class="shooting-star" style="top: 50%; left: -20%; animation-delay: 23s;"></div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <div id="clickMessageContainer"></div>
+
+    <!-- Galaxy Orb (fixed) -->
+    <div class="galaxy-orb" id="galaxyOrb" onclick="handleClick(event, this, 'galaxyOrb')">
+        <i class="fas fa-galaxy"></i>
+    </div>
+
+    <!-- Time Message (fixed) -->
+    <div class="time-message" id="timeMessage" onclick="handleClick(event, this, 'time')"></div>
+
+    <!-- Galaxy Hint (fixed) -->
+    <div class="galaxy-hint" id="galaxyHint" onclick="handleClick(event, this, 'hint')">
+        🌌 Click anywhere — every click speaks love ✨
+    </div>
+
+    <!-- Space Pet (fixed bottom left) -->
+    <div class="space-pet" id="spacePet" onclick="handleClick(event, this, 'pet')">
+        <i class="fas fa-cat"></i>
+        <div class="pet-message">I love Tayyaba 🐱</div>
+    </div>
+
+    <!-- Universe main -->
+    <div class="universe" id="universe">
+        <div class="interactive-header">
+            <h1 class="title" onclick="handleClick(event, this, 'title')">TAYYABA</h1>
+            <p style="font-size: 1.5rem; margin-top: 20px; text-shadow:0 0 15px #ffb6c1;" onclick="handleClick(event, this, 'subtitle')">✨ A living universe by Shoaib ✨</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="sections-grid">
+            <div class="interactive-card" onclick="handleClick(event, this, 'touchCard')"><div class="card-icon">❤️</div><h3>Touch of Love</h3><p>Click for sweet messages</p></div>
+            <div class="interactive-card" onclick="handleClick(event, this, 'dragCard')"><div class="card-icon">🪐</div><h3>Move Planets</h3><p>Drag planets below</p></div>
+            <div class="interactive-card" onclick="handleClick(event, this, 'proximityCard')"><div class="card-icon">⭐</div><h3>Star Proximity</h3><p>Hover & click stars</p></div>
+            <div class="interactive-card" onclick="handleClick(event, this, 'tiltCard')"><div class="card-icon">📱</div><h3>Galaxy Tilt</h3><p>Feel the universe</p></div>
+        </div>
+
+        <!-- Drag & Drop Zone -->
+        <div class="drag-zone" id="dragZone">
+            <div class="draggable" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" id="planet1" onclick="handleClick(event, this, 'planet1')">🌙</div>
+            <div class="draggable" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" id="planet2" onclick="handleClick(event, this, 'planet2')">☀️</div>
+            <div class="draggable" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" id="planet3" onclick="handleClick(event, this, 'planet3')">⭐</div>
+            <div class="draggable" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" id="planet4" onclick="handleClick(event, this, 'planet4')">🌍</div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <div class="drop-zone" id="dropZone" ondragover="allowDrop(event)" ondrop="drop(event)" onclick="handleClick(event, this, 'dropZone')">❤️ Drop Love Here ❤️</div>
+        </div>
+
+        <!-- Proximity Stars -->
+        <div class="star-field">
+            <div class="proximity-star" id="star1" data-index="0" onclick="handleClick(event, this, 'star1')"></div>
+            <div class="proximity-star" id="star2" data-index="1" onclick="handleClick(event, this, 'star2')"></div>
+            <div class="proximity-star" id="star3" data-index="2" onclick="handleClick(event, this, 'star3')"></div>
+            <div class="proximity-star" id="star4" data-index="3" onclick="handleClick(event, this, 'star4')"></div>
+        </div>
+
+        <!-- Cosmic Clock -->
+        <div class="clock-container">
+            <div class="cosmic-clock" id="cosmicClock" onclick="handleClick(event, this, 'clock')">💫 loading... 💫</div>
+        </div>
+
+        <!-- Love Comet + poem area -->
+        <div style="text-align: center;">
+            <div class="love-comet" onclick="generatePoem(event)"></div>
+            <div id="poemDisplay" class="poem-container">✨ click the comet for a love poem ✨</div>
+        </div>
+
+        <!-- Interactive Nebula (love cloud) -->
+        <div class="love-nebula" onclick="handleClick(event, this, 'nebula')" title="cosmic love cloud"></div>
+
+        <!-- ✨ NEW: Cosmic Message in a Bottle (replaces old wishing well) ✨ -->
+        <div class="cosmic-bottle" onclick="openBottleMessage(event)">
+            <span>🌠 message from the deep cosmos 🌠</span>
+        </div>
+
+        <!-- Mini Constellation -->
+        <div class="constellation">
+            <div class="constellation-star" onclick="handleClick(event, this, 'const1')"></div>
+            <div class="constellation-star" onclick="handleClick(event, this, 'const2')"></div>
+            <div class="constellation-star" onclick="handleClick(event, this, 'const3')"></div>
+            <div class="constellation-star" onclick="handleClick(event, this, 'const4')"></div>
+        </div>
+
+        <!-- Gravity Field -->
+        <h2 style="text-align: center;" onclick="handleClick(event, this, 'gravityTitle')">🌌 Gravity of Love 🌌</h2>
+        <div class="gravity-field" id="gravityField" onclick="handleClick(event, this, 'gravityField')" onmousemove="gravityEffect(event)"></div>
+
+        <!-- Interactive Planet -->
+        <h2 style="text-align: center;" onclick="handleClick(event, this, 'planetTitle')">🪐 Your Personal Planet 🪐</h2>
+        <div class="interactive-planet" id="interactivePlanet" onclick="handleClick(event, this, 'mainPlanet')">
+            <div class="planet-core">❤️</div>
+        </div>
+
+        <!-- Easter Eggs (hidden) -->
+        <div class="easter-egg" style="top: 200px; left: 200px;" onclick="handleClick(event, this, 'egg1')" title="Secret egg!"></div>
+        <div class="easter-egg" style="top: 500px; left: 800px;" onclick="handleClick(event, this, 'egg2')" title="Secret egg!"></div>
+        <div class="easter-egg" style="top: 1200px; left: 400px;" onclick="handleClick(event, this, 'egg3')" title="Secret egg!"></div>
+
+        <!-- Proposal -->
+        <div class="interactive-proposal">
+            <div class="proposal-box" onclick="handleClick(event, this, 'proposal')">
+                <div class="proposal-question">Tayyaba,</div>
+                <p style="font-size: 1.8rem; margin: 25px;">Every click says "I love you" in a different way.</p>
+                <div class="proposal-question">Will You Marry Me?</div>
+                
+                <div class="response-buttons">
+                    <button class="response-btn" id="yes-btn" onclick="handleClick(event, this, 'yesBtn')">YES! ❤️</button>
+                    <button class="response-btn" id="no-btn" onclick="handleClick(event, this, 'noBtn')">No</button>
+                </div>
+
+                <div id="response-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer onclick="handleClick(event, this, 'footer')">
+        Every single click creates a unique love message — try everywhere! 🌟
+    </footer>
+
+    <script>
+        // ========== LOVE MESSAGES ==========
+        const loveMessages = {
+            default: [ "❤️ I love you Tayyaba!", "💕 You're my everything!", "✨ Clicking for you!", "🌙 Thinking of you!", "⭐ You're my star!", "💫 Forever yours!", "🌍 You're my world!", "🎵 My heart sings for you!", "💝 All my love!", "🌸 Beautiful Tayyaba!" ],
+            title: [ "🌟 TAYYABA - most beautiful name!", "💖 Your name lights up my world!", "✨ TAYYABA - written in the stars!", "🌙 Every letter magic!", "💫 My favorite word!" ],
+            subtitle: [ "✨ A universe built just for you!", "💫 Shoaib's heart beats for Tayyaba!", "🌌 You're the center of my universe!" ],
+            touchCard: [ "❤️ Your touch is magical!", "💕 Feel the love in every click!", "✨ This card loves you!" ],
+            dragCard: [ "🪐 Drag planets to new orbits!", "🌍 Move the universe for you!", "⭐ Rearrange the stars for Tayyaba!" ],
+            proximityCard: [ "⭐ Stars shine brighter when you're near!", "💫 Proximity to you is everything!", "✨ The closer you get, the more I love!" ],
+            tiltCard: [ "📱 Tilt your phone, feel the galaxy!", "🌌 The universe moves with you!", "✨ Every angle shows my love!" ],
+            planet1: [ "🌙 The moon loves you!", "🌕 You're my moonlight!", "🌙 Even the moon orbits you!" ],
+            planet2: [ "☀️ You're my sunshine!", "🌞 You light up my world!", "☀️ Warm like your love!" ],
+            planet3: [ "⭐ You're my guiding star!", "✨ Make a wish - it's you!", "💫 Star light, star bright..." ],
+            planet4: [ "🌍 You're my whole world!", "🌎 Earth revolves around you!", "🌏 My global love!" ],
+            dropZone: [ "❤️ Love dropped successfully!", "💝 You complete me!", "💕 Dropping hearts for Tayyaba!" ],
+            star1: [ "⭐ First star - you're my #1!", "✨ Twinkle twinkle little star...", "💫 This star is named Tayyaba!" ],
+            star2: [ "⭐ Second star - twice the love!", "✨ You shine brighter than all!", "💫 Double the sparkle!" ],
+            star3: [ "⭐ Third star - lucky number 3!", "✨ Truly, madly, deeply!", "💫 Three words: I love you!" ],
+            star4: [ "⭐ Fourth star - forever love!", "✨ Eternal like these stars!", "💫 Four-ever and always!" ],
+            gravityTitle: [ "🌌 Gravity pulls me to you!", "🌟 You're my center of attraction!", "💫 Falling for you endlessly!" ],
+            gravityField: [ "🌌 Your gravitational pull is strong!", "⭐ I'm drawn to you!", "💫 The force of love!" ],
+            planetTitle: [ "🪐 Your personal planet!", "🌍 This world is yours!", "⭐ A planet made just for Tayyaba!" ],
+            mainPlanet: [ "🪐 This planet loves you!", "🌍 Center of my universe!", "⭐ Even planets orbit you!", "💫 Your gravity pulls my heart!", "🌙 Out of this world!" ],
+            pet: [ "🐱 Meow means I love you!", "🐾 Purrfect like Tayyaba!", "😺 Even pets adore you!", "🐱 This cat loves only you!", "😸 Purring because of you!" ],
+            proposal: [ "💍 Will you marry me? (click again!)", "💒 I want forever with you!", "👰‍♀️ You'd be the most beautiful bride!", "💑 Tayyaba + Shoaib = Forever!" ],
+            yesBtn: [ "🎉 YES! YOU MADE ME SO HAPPY!", "💖 I LOVE YOU SO MUCH!", "✨ FOREVER STARTS NOW!", "🌍 YOU'RE MY WHOLE WORLD!", "💫 BEST MOMENT EVER!" ],
+            noBtn: [ "😜 The answer is always YES! ❤️", "✨ You know you want to say YES!", "❤️ Even this button loves you!" ],
+            galaxyOrb: [ "🌌 You're my entire galaxy!", "✨ A universe built for you!", "🪐 This orb contains my love!", "🌟 Galaxies revolve around you!" ],
+            hint: [ "💫 Click anywhere — love appears!", "🌠 Every click is a message from me!", "💖 This whole page loves Tayyaba!" ],
+            time: [ "⏰ Every minute better with you!", "⌛ Time stops when I see you!", "🕰️ Forever isn't long enough!", "📆 Counting days until forever!" ],
+            footer: [ "🌟 Thanks for exploring our universe!", "💫 You're the best part of everything!", "❤️ Made with love for Tayyaba!" ],
+            egg1: "🥚 SECRET: You're the treasure I've been looking for!",
+            egg2: "🥚 SECRET: Every universe has us together!",
+            egg3: "🥚 SECRET: Coffee = Love = You!",
+            clock: [ "⏰ Cosmic time: always time for love!", "💫 This clock ticks only for you!", "🌙 Every second thinks of Tayyaba!" ],
+            const1: [ "✨ Constellation: T for Tayyaba!", "🌟 First star of many!" ],
+            const2: [ "🌟 Second star: you shine!", "✨ Another piece of our sky!" ],
+            const3: [ "💫 Third star: complete us!", "⭐ Three times the love!" ],
+            const4: [ "🌠 Fourth star: forever!", "✨ Our constellation is perfect!" ],
+            nebula: [ "🌫️ You're wrapped in a nebula of love!", "💖 This cloud holds all my affection!", "✨ Cosmic dust of dreams, all for you." ],
+            bottle: [ "📜 'To Tayyaba: you are the gravity of my heart.'", "📜 'Across galaxies, I'd find you.'", "📜 'This bottle contains all my love.'", "📜 'Shoaib's message: will you be my universe?'", "📜 'Every star whispers your name.'" ]
+        };
+
+        // ========== POEMS DATABASE ==========
+        const lovePoems = [
+            "In your eyes, galaxies are born,\nTayyaba, my universe reborn.",
+            "Stars fade, moons may wane,\nbut my love for you remains.",
+            "Across the cosmos, through endless space,\nI'd travel just to see your face.",
+            "You are the gravity that holds my soul,\nwithout you, I'm not whole.",
+            "Like a comet trailing light,\nyour love ignites my night.",
+            "Every click, every sigh,\nTayyaba, you're my sky.",
+            "Nebulae of pink and gold,\nin your story, I'll grow old.",
+            "The universe whispers your name,\nin stardust and flame.",
+            "Distance means nothing when love is true,\nTayyaba, my universe is you.",
+            "You're the poem I'll always write,\nmy endless cosmic light."
+        ];
+
+        function generatePoem(event) {
+            handleClick(event, event.currentTarget, 'comet');
+            const poemDiv = document.getElementById('poemDisplay');
+            const randomIndex = Math.floor(Math.random() * lovePoems.length);
+            poemDiv.innerHTML = `✨💖<br>${lovePoems[randomIndex]}<br>💖✨`;
+        }
+
+        // ✨ NEW: Bottle message function
+        function openBottleMessage(event) {
+            handleClick(event, event.currentTarget, 'bottle');
+            const bottleMsg = loveMessages.bottle[Math.floor(Math.random() * loveMessages.bottle.length)];
+            showClickMessage(bottleMsg, event.clientX, event.clientY);
+            // add sparkle effect
+            for (let i=0; i<8; i++) {
+                setTimeout(() => createHeartExplosion(event.clientX + (Math.random()-0.5)*100, event.clientY + (Math.random()-0.5)*100), i*30);
+            }
+        }
+
+        // ========== CURSOR & TRAIL ==========
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 15 + 'px';
+            cursor.style.top = e.clientY - 15 + 'px';
+            if (Math.random() < 0.08) createHeartTrail(e.clientX, e.clientY);
+        });
+
+        function createHeartTrail(x, y) {
+            const heart = document.createElement('i');
+            heart.className = 'fas fa-heart heart-trail';
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            heart.style.setProperty('--x', (Math.random() - 0.5) * 200 + 'px');
+            heart.style.setProperty('--y', -80 + (Math.random() * -100) + 'px');
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 2000);
+        }
+
+        // ========== CLICK HANDLER ==========
+        let clickTimeout = null;
+        function handleClick(event, element, type) {
+            if (event) event.stopPropagation();
+            if (clickTimeout) return;
+            clickTimeout = setTimeout(() => { clickTimeout = null; }, 150);
+
+            const x = event ? event.clientX : window.innerWidth/2;
+            const y = event ? event.clientY : window.innerHeight/2;
+
+            createHeartExplosion(x, y);
+            let message = getLoveMessage(type);
+            showClickMessage(message, x, y);
+            handleSpecialClick(type, element, event);
+        }
+
+        function getLoveMessage(type) {
+            if (loveMessages[type]) {
+                if (Array.isArray(loveMessages[type])) {
+                    return loveMessages[type][Math.floor(Math.random() * loveMessages[type].length)];
+                } else return loveMessages[type];
+            }
+            if (type.includes('title')) return loveMessages.title[Math.floor(Math.random() * loveMessages.title.length)];
+            if (type.includes('star')) return loveMessages.star1[Math.floor(Math.random() * loveMessages.star1.length)];
+            if (type.includes('pet')) return loveMessages.pet[Math.floor(Math.random() * loveMessages.pet.length)];
+            if (type.includes('yes')) return loveMessages.yesBtn[Math.floor(Math.random() * loveMessages.yesBtn.length)];
+            if (type.includes('no')) return loveMessages.noBtn[Math.floor(Math.random() * loveMessages.noBtn.length)];
+            if (type.includes('clock')) return loveMessages.clock[Math.floor(Math.random() * loveMessages.clock.length)];
+            if (type.includes('comet')) return "☄️ A poem appears...";
+            if (type.includes('const')) return loveMessages.const1[Math.floor(Math.random() * loveMessages.const1.length)];
+            if (type.includes('nebula')) return loveMessages.nebula[Math.floor(Math.random() * loveMessages.nebula.length)];
+            if (type.includes('bottle')) return loveMessages.bottle[Math.floor(Math.random() * loveMessages.bottle.length)];
+            return loveMessages.default[Math.floor(Math.random() * loveMessages.default.length)];
+        }
+
+        function showClickMessage(message, x, y) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'click-message';
+            msgDiv.textContent = message;
+            let left = x;
+            let top = y;
+            const w = Math.min(300, window.innerWidth * 0.8);
+            if (left + w/2 > window.innerWidth) left = window.innerWidth - w/2;
+            if (left - w/2 < 0) left = w/2;
+            if (top - 50 < 0) top = 80;
+            if (top + 100 > window.innerHeight) top = window.innerHeight - 100;
+            msgDiv.style.left = left + 'px';
+            msgDiv.style.top = top + 'px';
+            document.body.appendChild(msgDiv);
+            setTimeout(() => msgDiv.remove(), 2100);
+        }
+
+        function createHeartExplosion(x, y) {
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('i');
+                    heart.className = 'fas fa-heart explosion-heart';
+                    heart.style.left = x + 'px';
+                    heart.style.top = y + 'px';
+                    heart.style.color = ['#ff6b9d','#ff1493','#ff69b4','gold'][Math.floor(Math.random()*4)];
+                    heart.style.setProperty('--x', (Math.cos(i * Math.PI/4) * 120) + 'px');
+                    heart.style.setProperty('--y', (Math.sin(i * Math.PI/4) * 120) + 'px');
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 1500);
+                }, i * 40);
+            }
+        }
+
+        // ========== SPECIAL CLICK ==========
+        let eggsFound = 0;
+        function handleSpecialClick(type, element, event) {
+            if (type === 'yesBtn') {
+                document.getElementById('response-message').innerHTML = '✨💖 YES! YOU\'VE MADE ME THE HAPPIEST! 💖✨';
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => createHeartExplosion(Math.random() * window.innerWidth, Math.random() * window.innerHeight), i * 20);
+                }
+            }
+            if (type === 'noBtn' && event) {
+                showClickMessage("😜 The answer is always YES! (you know it)", event.clientX, event.clientY);
+                document.getElementById('no-btn').style.position = 'relative';
+            }
+            if (type.includes('egg')) {
+                eggsFound++;
+                if (eggsFound === 3) {
+                    showClickMessage("🎉 ALL EGGS FOUND! YOU'RE THE TREASURE! 🎉", event?.clientX || window.innerWidth/2, event?.clientY || window.innerHeight/2);
+                }
+            }
+            if (type === 'title' && element) {
+                element.style.animation = 'none';
+                element.offsetHeight;
+                element.style.animation = 'titlePulse 2.5s infinite';
+            }
+        }
+
+        // ========== DRAG & DROP ==========
+        function dragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.id);
+            showClickMessage("🪐 Dragging love!", e.clientX, e.clientY);
+        }
+        function dragEnd(e) {}
+        function allowDrop(e) { e.preventDefault(); }
+        function drop(e) {
+            e.preventDefault();
+            const id = e.dataTransfer.getData('text');
+            const draggable = document.getElementById(id);
+            if (draggable && e.target.classList.contains('drop-zone')) {
+                e.target.appendChild(draggable);
+                showClickMessage("❤️ Love dropped! You complete me.", e.clientX, e.clientY);
+                draggable.style.position = 'relative';
+            }
+        }
+        window.dragStart = dragStart; window.dragEnd = dragEnd; window.allowDrop = allowDrop; window.drop = drop;
+        window.handleClick = handleClick;
+        window.generatePoem = generatePoem;
+        window.openBottleMessage = openBottleMessage;
+
+        // ========== GRAVITY EFFECT ==========
+        function gravityEffect(e) {
+            const field = document.getElementById('gravityField');
+            const rect = field.getBoundingClientRect();
+            if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '6px'; particle.style.height = '6px';
+                particle.style.background = `hsl(${Math.random()*60 + 300}, 100%, 70%)`;
+                particle.style.borderRadius = '50%';
+                particle.style.left = (e.clientX - rect.left) + 'px';
+                particle.style.top = (e.clientY - rect.top) + 'px';
+                particle.style.pointerEvents = 'none';
+                particle.style.boxShadow = '0 0 15px gold';
+                field.appendChild(particle);
+                setTimeout(() => particle.remove(), 2000);
+            }
+        }
+        window.gravityEffect = gravityEffect;
+
+        // ========== TIME MESSAGE & COSMIC CLOCK ==========
+        function updateTimeMessage() {
+            const t = document.getElementById('timeMessage');
+            const h = new Date().getHours();
+            let message = '';
+            if (h >= 5 && h < 12) message = '☀️ Good morning beautiful!';
+            else if (h >= 12 && h < 18) message = '🌞 Good afternoon my love!';
+            else if (h >= 18 && h < 22) message = '🌙 Good evening starlight!';
+            else message = '💫 Dreaming of you!';
+            t.innerHTML = message;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 5000);
+        }
+        setInterval(updateTimeMessage, 60000);
+        setTimeout(updateTimeMessage, 1000);
+
+        function updateCosmicClock() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('cosmicClock').innerHTML = `⏰ ${timeStr} · Tayyaba's time ⏰`;
+        }
+        setInterval(updateCosmicClock, 1000);
+        updateCosmicClock();
+
+        // ========== RIGHT CLICK ==========
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            handleClick(e, null, 'default');
+        });
+
+        // ========== BACKGROUND CLICKS ==========
+        document.body.addEventListener('click', (e) => {
+            if (e.target === document.body || e.target.classList.contains('universe') || e.target.id === 'universe' || e.target === document.documentElement) {
+                handleClick(e, null, 'default');
+            }
+        }, false);
+
+        // ========== WELCOME ==========
+        setTimeout(() => {
+            showClickMessage("🌌 Welcome Tayyaba! Click ANYTHING! 🌌", window.innerWidth/2, window.innerHeight/2);
+        }, 500);
+    </script>
+</body>
+</html>
